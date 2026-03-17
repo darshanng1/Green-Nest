@@ -35,14 +35,14 @@ import {
   UtensilsCrossed,
   Store,
   Filter,
-  Leaf
+  Leaf,
+  Home
 } from "lucide-react";
 import { useState, useEffect, useMemo } from "react";
 
 // --- Components ---
 
-const Navbar = ({ darkMode, toggleDarkMode }: { darkMode: boolean, toggleDarkMode: () => void }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar = ({ darkMode, toggleDarkMode, isOpen, setIsOpen }: { darkMode: boolean, toggleDarkMode: () => void, isOpen: boolean, setIsOpen: (open: boolean) => void }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -52,12 +52,12 @@ const Navbar = ({ darkMode, toggleDarkMode }: { darkMode: boolean, toggleDarkMod
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Categories', href: '#categories' },
-    { name: 'Offers', href: '#offers' },
-    { name: 'Stores', href: '#stores' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '#home', icon: <Home size={20} /> },
+    { name: 'Categories', href: '#categories', icon: <ShoppingBag size={20} /> },
+    { name: 'Offers', href: '#offers', icon: <Zap size={20} /> },
+    { name: 'Stores', href: '#stores', icon: <MapPin size={20} /> },
+    { name: 'About', href: '#about', icon: <CheckCircle size={20} /> },
+    { name: 'Contact', href: '#contact', icon: <Mail size={20} /> }
   ];
 
   return (
@@ -118,43 +118,80 @@ const Navbar = ({ darkMode, toggleDarkMode }: { darkMode: boolean, toggleDarkMod
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[110] bg-white dark:bg-brand-dark flex flex-col p-10 lg:hidden"
-          >
-            <div className="flex justify-between items-center mb-16">
-              <div className="flex items-center gap-2">
-                <Leaf className="text-brand-green w-8 h-8" />
-                <span className="text-2xl font-display font-black dark:text-white">GREEN<span className="text-brand-accent">NEST</span></span>
-              </div>
-              <button onClick={() => setIsOpen(false)} className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full dark:text-white">
-                <X size={24} />
-              </button>
-            </div>
-            <div className="flex flex-col gap-8">
-              {navLinks.map((link) => (
-                <a 
-                  key={link.name} 
-                  href={link.href} 
-                  onClick={() => setIsOpen(false)} 
-                  className="text-4xl font-display font-black text-brand-dark dark:text-white hover:text-brand-green transition-colors"
+          <>
+            {/* Overlay */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-brand-dark/60 backdrop-blur-sm z-[110] lg:hidden"
+            />
+            
+            {/* Drawer */}
+            <motion.div 
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '-100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed top-0 left-0 bottom-0 w-[85%] max-w-sm z-[120] bg-white dark:bg-brand-dark shadow-2xl flex flex-col lg:hidden"
+            >
+              {/* Drawer Header */}
+              <div className="p-6 flex justify-between items-center border-b border-gray-100 dark:border-white/5">
+                <div className="flex items-center gap-2">
+                  <div className="bg-brand-green p-1.5 rounded-lg">
+                    <Leaf className="text-white w-5 h-5" />
+                  </div>
+                  <span className="text-xl font-display font-black dark:text-white tracking-tighter">
+                    GREEN<span className="text-brand-accent">NEST</span>
+                  </span>
+                </div>
+                <button 
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 bg-gray-50 dark:bg-gray-800 rounded-full text-brand-dark dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-            <div className="mt-auto">
-              <button className="w-full bg-brand-green text-white py-6 rounded-2xl text-xl font-black uppercase tracking-widest shadow-2xl shadow-brand-green/30">
-                Find Store
-              </button>
-            </div>
-          </motion.div>
+                  <X size={20} />
+                </button>
+              </div>
+
+              {/* Drawer Content */}
+              <div className="flex-1 overflow-y-auto py-8 px-6">
+                <div className="flex flex-col gap-2">
+                  {navLinks.map((link, i) => (
+                    <motion.a 
+                      key={link.name} 
+                      href={link.href} 
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.05 }}
+                      onClick={() => setIsOpen(false)} 
+                      className="flex items-center gap-4 p-4 rounded-2xl text-brand-dark dark:text-white hover:bg-brand-green/5 hover:text-brand-green transition-all group"
+                    >
+                      <div className="w-10 h-10 rounded-xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center group-hover:bg-brand-green group-hover:text-white transition-colors">
+                        {link.icon}
+                      </div>
+                      <span className="text-sm font-black uppercase tracking-widest">{link.name}</span>
+                      <ChevronRight size={16} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Drawer Footer / CTA */}
+              <div className="p-6 border-t border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-brand-dark/50">
+                <motion.button 
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-brand-green text-white py-5 rounded-2xl text-sm font-black uppercase tracking-widest shadow-xl shadow-brand-green/20 flex items-center justify-center gap-3"
+                >
+                  <Store size={18} />
+                  Find Store
+                </motion.button>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
@@ -1119,6 +1156,7 @@ const Footer = () => {
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState('All');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -1127,7 +1165,7 @@ export default function App() {
 
   return (
     <div className={`min-h-screen selection:bg-brand-green selection:text-white ${darkMode ? 'dark' : ''}`}>
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       <Hero />
       <ValuePropStrip />
       <Categories setCategoryFilter={setCategoryFilter} />
@@ -1141,16 +1179,23 @@ export default function App() {
       <Footer />
 
       {/* Sticky WhatsApp Button */}
-      <motion.a 
-        href="https://wa.me/919876543210"
-        target="_blank"
-        whileHover={{ scale: 1.1, rotate: 5 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-10 right-10 z-[100] w-16 h-16 md:w-20 md:h-20 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl shadow-green-900/40"
-      >
-        <MessageSquare size={32} fill="currentColor" className="md:w-10 md:h-10" />
-        <span className="absolute -top-1 -left-1 w-4 h-4 md:w-6 md:h-6 bg-brand-accent rounded-full animate-ping"></span>
-      </motion.a>
+      <AnimatePresence>
+        {!isMenuOpen && (
+          <motion.a 
+            href="https://wa.me/919876543210"
+            target="_blank"
+            initial={{ opacity: 0, scale: 0, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0, y: 20 }}
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+            className="fixed bottom-10 right-10 z-[100] w-16 h-16 md:w-20 md:h-20 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl shadow-green-900/40"
+          >
+            <MessageSquare size={32} fill="currentColor" className="md:w-10 md:h-10" />
+            <span className="absolute -top-1 -left-1 w-4 h-4 md:w-6 md:h-6 bg-brand-accent rounded-full animate-ping"></span>
+          </motion.a>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
