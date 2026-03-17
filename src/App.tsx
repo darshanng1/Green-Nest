@@ -140,53 +140,52 @@ const Navbar = ({ darkMode, toggleDarkMode, isOpen, setIsOpen }: { darkMode: boo
               className="fixed top-0 left-0 bottom-0 w-[85%] max-w-sm z-[120] bg-white dark:bg-brand-dark shadow-2xl flex flex-col lg:hidden"
             >
               {/* Drawer Header */}
-              <div className="p-6 flex justify-between items-center border-b border-gray-100 dark:border-white/5">
+              <div className="p-4 flex justify-between items-center border-b border-gray-100 dark:border-white/5">
                 <div className="flex items-center gap-2">
-                  <div className="bg-brand-green p-1.5 rounded-lg">
-                    <Leaf className="text-white w-5 h-5" />
+                  <div className="bg-brand-green p-1 rounded-lg">
+                    <Leaf className="text-white w-4 h-4" />
                   </div>
-                  <span className="text-xl font-display font-black dark:text-white tracking-tighter">
+                  <span className="text-lg font-display font-black dark:text-white tracking-tighter">
                     GREEN<span className="text-brand-accent">NEST</span>
                   </span>
                 </div>
                 <button 
                   onClick={() => setIsOpen(false)}
-                  className="p-2 bg-gray-50 dark:bg-gray-800 rounded-full text-brand-dark dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  className="p-1.5 bg-gray-50 dark:bg-gray-800 rounded-full text-brand-dark dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 >
-                  <X size={20} />
+                  <X size={18} />
                 </button>
               </div>
 
               {/* Drawer Content */}
-              <div className="flex-1 overflow-y-auto py-8 px-6">
-                <div className="flex flex-col gap-2">
-                  {navLinks.map((link, i) => (
+              <div className="flex-1 overflow-y-auto py-4 px-3">
+                <div className="flex flex-col gap-1">
+                  {navLinks.map((link) => (
                     <motion.a 
                       key={link.name} 
                       href={link.href} 
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.05 }}
                       onClick={() => setIsOpen(false)} 
-                      className="flex items-center gap-4 p-4 rounded-2xl text-brand-dark dark:text-white hover:bg-brand-green/5 hover:text-brand-green transition-all group"
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-xl text-brand-dark dark:text-white hover:bg-brand-green/5 hover:text-brand-green transition-all group"
                     >
-                      <div className="w-10 h-10 rounded-xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center group-hover:bg-brand-green group-hover:text-white transition-colors">
+                      <div className="w-8 h-8 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center group-hover:bg-brand-green group-hover:text-white transition-colors">
                         {link.icon}
                       </div>
-                      <span className="text-sm font-black uppercase tracking-widest">{link.name}</span>
-                      <ChevronRight size={16} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <span className="text-[11px] font-black uppercase tracking-widest">{link.name}</span>
+                      <ChevronRight size={14} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
                     </motion.a>
                   ))}
                 </div>
               </div>
 
               {/* Drawer Footer / CTA */}
-              <div className="p-6 border-t border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-brand-dark/50">
+              <div className="p-4 border-t border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-brand-dark/50">
                 <motion.button 
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-brand-green text-white py-5 rounded-2xl text-sm font-black uppercase tracking-widest shadow-xl shadow-brand-green/20 flex items-center justify-center gap-3"
+                  className="w-full bg-brand-green text-white py-4 rounded-xl text-[11px] font-black uppercase tracking-widest shadow-xl shadow-brand-green/20 flex items-center justify-center gap-2"
                 >
-                  <Store size={18} />
+                  <Store size={16} />
                   Find Store
                 </motion.button>
               </div>
