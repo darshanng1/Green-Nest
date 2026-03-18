@@ -70,8 +70,8 @@ const Navbar = ({ darkMode, toggleDarkMode, isOpen, setIsOpen }: { darkMode: boo
           >
             <Leaf className="text-white w-6 h-6" />
           </motion.div>
-          <span className={`text-xl md:text-2xl font-display font-black tracking-tighter ${scrolled || darkMode ? 'text-brand-dark dark:text-white' : 'text-white'}`}>
-            GREEN<span className="text-brand-accent">NEST</span>
+          <span className={`text-xl md:text-2xl font-display font-bold tracking-tighter ${scrolled || darkMode ? 'text-brand-dark dark:text-white' : 'text-white'}`}>
+            GREEN<span className="text-brand-green">NEST</span>
           </span>
         </div>
 
@@ -82,10 +82,10 @@ const Navbar = ({ darkMode, toggleDarkMode, isOpen, setIsOpen }: { darkMode: boo
               <a 
                 key={link.name} 
                 href={link.href} 
-                className={`text-[11px] font-black uppercase tracking-[0.2em] relative group transition-colors ${scrolled || darkMode ? 'text-brand-dark/70 hover:text-brand-green dark:text-white/70' : 'text-white/80 hover:text-white'}`}
+                className={`text-[11px] font-bold uppercase tracking-[0.25em] relative group transition-colors font-accent ${scrolled || darkMode ? 'text-brand-dark/80 hover:text-brand-green dark:text-white/80' : 'text-white/90 hover:text-white'}`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-accent transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-green transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
@@ -100,7 +100,7 @@ const Navbar = ({ darkMode, toggleDarkMode, isOpen, setIsOpen }: { darkMode: boo
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-brand-green text-white px-8 py-3 rounded-xl text-xs font-black uppercase tracking-widest shadow-lg shadow-brand-green/20"
+              className="bg-brand-green text-white px-8 py-3 rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg shadow-brand-green/20 font-accent"
             >
               Find Store
             </motion.button>
@@ -146,7 +146,7 @@ const Navbar = ({ darkMode, toggleDarkMode, isOpen, setIsOpen }: { darkMode: boo
                     <Leaf className="text-white w-4 h-4" />
                   </div>
                   <span className="text-lg font-display font-black dark:text-white tracking-tighter">
-                    GREEN<span className="text-brand-accent">NEST</span>
+                    GREEN<span className="text-brand-green">NEST</span>
                   </span>
                 </div>
                 <button 
@@ -207,22 +207,36 @@ const Hero = () => {
       title: "Crystal Clear",
       highlight: "Entertainment.",
       subtext: "Premium Smart TVs with stunning 4K resolution at unbeatable prices.",
-      img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&q=80&w=1920",
+      img: "https://images.unsplash.com/photo-1593784991095-a205039475fe?auto=format&fit=crop&q=80&w=1920",
       category: "Television"
     },
     {
       title: "Efficiency Meets",
       highlight: "Affordability.",
       subtext: "Top-tier washing machines and dryers for your modern home.",
-      img: "https://images.unsplash.com/photo-1582733775062-eb9217dfd501?auto=format&fit=crop&q=80&w=1920",
+      img: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&q=80&w=1920",
       category: "Washing Machine"
     },
     {
       title: "Freshness Redefined",
       highlight: "Every Day.",
       subtext: "Energy-efficient refrigerators designed for modern living spaces.",
-      img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1920",
+      img: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&q=80&w=1920",
       category: "Refrigerator"
+    },
+    {
+      title: "Powerful Grinding",
+      highlight: "Smart Cooking.",
+      subtext: "High-performance mixer grinders for the modern Indian kitchen.",
+      img: "https://images.unsplash.com/photo-1527339523375-82d1ec483052?auto=format&fit=crop&q=80&w=1920",
+      category: "Mixer Grinder"
+    },
+    {
+      title: "Perfect Baking",
+      highlight: "Every Time.",
+      subtext: "Advanced convection ovens and microwaves for the home chef.",
+      img: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&q=80&w=1920",
+      category: "Microwave Oven"
     }
   ];
 
@@ -254,8 +268,8 @@ const Hero = () => {
                 referrerPolicy="no-referrer"
               />
             </motion.div>
-            <div className="absolute inset-0 bg-brand-dark/60"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 via-brand-dark/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-brand-dark/30"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/70 via-brand-dark/20 to-transparent"></div>
           </motion.div>
         </AnimatePresence>
       </div>
@@ -283,22 +297,46 @@ const Hero = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="flex items-center gap-4 mb-6 md:mb-8"
               >
-                <span className="w-12 md:w-16 h-[2px] bg-brand-accent"></span>
-                <span className="text-brand-accent font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[10px] md:text-xs">
+                <span className="w-12 md:w-16 h-[2px] bg-brand-green"></span>
+                <span className="text-brand-green font-accent font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-sm">
                   {slides[currentSlide].category} • Factory Seconds
                 </span>
               </motion.div>
 
               <motion.h1 
                 variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0 }
+                  hidden: { opacity: 0 },
+                  visible: { 
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.1
+                    }
+                  }
                 }}
-                transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-[1.1] mb-6 md:mb-10"
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white leading-[1.05] mb-6 md:mb-10 tracking-tight"
               >
-                {slides[currentSlide].title} <br />
-                <span className="text-brand-accent">{slides[currentSlide].highlight}</span>
+                {slides[currentSlide].title.split(' ').map((word, i) => (
+                  <motion.span 
+                    key={i}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: { opacity: 1, y: 0 }
+                    }}
+                    className="inline-block mr-4"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+                <br />
+                <motion.span 
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 }
+                  }}
+                  className="text-brand-green"
+                >
+                  {slides[currentSlide].highlight}
+                </motion.span>
               </motion.h1>
 
               <motion.p 
@@ -307,7 +345,7 @@ const Hero = () => {
                   visible: { opacity: 1, y: 0 }
                 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                className="text-base sm:text-lg md:text-xl text-white/90 mb-8 md:mb-12 max-w-xl leading-relaxed font-medium"
+                className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 md:mb-12 max-w-2xl leading-relaxed font-normal"
               >
                 {slides[currentSlide].subtext}
               </motion.p>
@@ -323,7 +361,7 @@ const Hero = () => {
                 <motion.button 
                   whileHover={{ scale: 1.05, backgroundColor: '#0c3031' }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-brand-green text-white px-8 md:px-12 py-4 md:py-6 rounded-2xl text-sm md:text-lg font-black uppercase tracking-widest transition-all flex items-center justify-center gap-3 shadow-2xl shadow-brand-green/40"
+                  className="bg-brand-green text-white px-8 md:px-12 py-4 md:py-6 rounded-2xl text-sm md:text-lg font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-3 shadow-2xl shadow-brand-green/40 font-accent"
                 >
                   Explore Products
                   <ArrowRight size={20} />
@@ -331,7 +369,7 @@ const Hero = () => {
                 <motion.button 
                   whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.9)' }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white text-brand-dark px-8 md:px-12 py-4 md:py-6 rounded-2xl text-sm md:text-lg font-black uppercase tracking-widest transition-all flex items-center justify-center gap-3"
+                  className="bg-white text-brand-dark px-8 md:px-12 py-4 md:py-6 rounded-2xl text-sm md:text-lg font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-3 font-accent"
                 >
                   Find Store
                   <MapPin size={20} />
@@ -347,9 +385,9 @@ const Hero = () => {
                 className="flex flex-wrap gap-6 md:gap-12"
               >
                 {[
-                  { icon: <ShieldCheck className="text-brand-accent w-5 h-5 md:w-6 md:h-6" />, text: "Warranty Included" },
-                  { icon: <CheckCircle className="text-brand-accent w-5 h-5 md:w-6 md:h-6" />, text: "Quality Checked" },
-                  { icon: <Zap className="text-brand-accent w-5 h-5 md:w-6 md:h-6" />, text: "Up to 60% Off" }
+                  { icon: <ShieldCheck className="text-brand-green w-5 h-5 md:w-6 md:h-6" />, text: "Warranty Included" },
+                  { icon: <CheckCircle className="text-brand-green w-5 h-5 md:w-6 md:h-6" />, text: "Quality Checked" },
+                  { icon: <Zap className="text-brand-green w-5 h-5 md:w-6 md:h-6" />, text: "Up to 60% Off" }
                 ].map((badge, i) => (
                   <div key={i} className="flex items-center gap-2 md:gap-3 text-white font-bold tracking-wide">
                     {badge.icon}
@@ -366,7 +404,7 @@ const Hero = () => {
       <div className="absolute top-1/2 -translate-y-1/2 left-6 z-20 hidden md:block">
         <button 
           onClick={prevSlide}
-          className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-brand-accent hover:border-brand-accent transition-all duration-300"
+          className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-brand-green hover:border-brand-green transition-all duration-300"
         >
           <ArrowLeftRight className="rotate-180" size={24} />
         </button>
@@ -374,7 +412,7 @@ const Hero = () => {
       <div className="absolute top-1/2 -translate-y-1/2 right-6 z-20 hidden md:block">
         <button 
           onClick={nextSlide}
-          className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-brand-accent hover:border-brand-accent transition-all duration-300"
+          className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-brand-green hover:border-brand-green transition-all duration-300"
         >
           <ArrowRight size={24} />
         </button>
@@ -386,7 +424,7 @@ const Hero = () => {
           <button 
             key={i}
             onClick={() => setCurrentSlide(i)}
-            className={`h-1.5 transition-all duration-500 rounded-full ${currentSlide === i ? 'w-12 bg-brand-accent' : 'w-4 bg-white/30'}`}
+            className={`h-1.5 transition-all duration-500 rounded-full ${currentSlide === i ? 'w-12 bg-brand-green' : 'w-4 bg-white/30'}`}
           ></button>
         ))}
       </div>
@@ -396,32 +434,77 @@ const Hero = () => {
 
 const ValuePropStrip = () => {
   const items = [
-    { icon: <Zap />, title: "UP TO 60% OFF", desc: "Unbeatable pricing on surplus stock" },
+    { icon: <Truck />, title: "FREE DELIVERY", desc: "Across all major cities in India" },
     { icon: <ShieldCheck />, title: "CERTIFIED QUALITY", desc: "Rigorous 40-point quality testing" },
     { icon: <CheckCircle />, title: "WARRANTY INCLUDED", desc: "Full peace of mind with every purchase" },
-    { icon: <Truck />, title: "DIRECT FROM SOURCE", desc: "Sourced directly from manufacturers" }
+    { icon: <ArrowLeftRight />, title: "EASY EXCHANGE", desc: "Best value for your old appliances" }
   ];
 
   return (
-    <section className="py-16 bg-brand-green text-white">
+    <section className="py-20 bg-brand-green text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {items.map((item, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className="flex items-center gap-6 group"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-brand-green group-hover:rotate-12 transition-all duration-500 shadow-xl">
+                {item.icon}
+              </div>
+              <div>
+                <h4 className="font-display font-bold text-sm tracking-[0.1em] mb-1 uppercase font-accent">{item.title}</h4>
+                <p className="text-white/80 text-[10px] font-bold uppercase tracking-widest leading-relaxed font-accent">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhyChooseUs = () => {
+  const reasons = [
+    { title: "Eco-Friendly Choice", desc: "By choosing refurbished, you reduce e-waste and help the planet.", icon: <Leaf className="text-brand-green" /> },
+    { title: "Smart Savings", desc: "Get premium brands at up to 60% less than market price.", icon: <Zap className="text-brand-green" /> },
+    { title: "Expert Support", desc: "Dedicated after-sales support for all your appliance needs.", icon: <MessageSquare className="text-brand-green" /> }
+  ];
+
+  return (
+    <section className="py-24 bg-white dark:bg-brand-dark">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <motion.span 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-brand-green font-bold uppercase tracking-[0.4em] text-xs mb-4 block"
+          >
+            The Green Nest Advantage
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl font-display font-extrabold mb-6 text-brand-dark dark:text-white">Why Smart Shoppers <span className="text-brand-green">Choose Us</span></h2>
+          <p className="text-brand-dark/70 dark:text-white/70 font-medium text-lg">We bridge the gap between premium quality and affordable pricing, ensuring every home gets the best technology without breaking the bank.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {reasons.map((reason, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="flex items-center gap-6 group"
+              transition={{ delay: i * 0.2 }}
+              className="bg-white dark:bg-slate-900 p-10 rounded-[2.5rem] shadow-xl shadow-black/5 border border-slate-100 dark:border-white/5 hover:border-brand-green transition-all group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-brand-accent transition-colors duration-500">
-                {item.icon}
+              <div className="w-16 h-16 rounded-2xl bg-brand-green/10 dark:bg-brand-green/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-sm">
+                {reason.icon}
               </div>
-              <div>
-                <h4 className="font-display font-black text-sm tracking-[0.1em] mb-1">{item.title}</h4>
-                <p className="text-white/60 text-xs font-medium uppercase tracking-widest">{item.desc}</p>
-              </div>
+              <h3 className="text-xl font-display font-bold mb-4 text-brand-dark dark:text-white">{reason.title}</h3>
+              <p className="text-brand-dark/60 dark:text-white/60 text-base leading-relaxed">{reason.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -449,7 +532,7 @@ const Categories = ({ setCategoryFilter }: { setCategoryFilter: (cat: string) =>
   };
 
   return (
-    <section id="categories" className="py-24 md:py-32 bg-white">
+    <section id="categories" className="py-24 md:py-32 bg-white dark:bg-brand-dark">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 md:mb-24">
           <motion.div 
@@ -460,7 +543,7 @@ const Categories = ({ setCategoryFilter }: { setCategoryFilter: (cat: string) =>
           >
             <span className="w-12 h-[2px] bg-brand-green"></span>
             <h2 className="text-sm md:text-base font-black uppercase tracking-[0.4em] text-brand-green">
-              SHOP BY CATEGORY IMAGES
+              PREMIUM CATEGORIES
             </h2>
           </motion.div>
           <motion.h3 
@@ -468,9 +551,9 @@ const Categories = ({ setCategoryFilter }: { setCategoryFilter: (cat: string) =>
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl md:text-4xl lg:text-5xl font-display font-black text-brand-dark leading-tight"
+            className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-brand-dark dark:text-white leading-tight max-w-4xl"
           >
-            Washing Machine / Refrigerator / AC / Microwave / Mixer / Cooler
+            Explore our <span className="text-brand-green underline decoration-brand-green/30 underline-offset-8">Curated</span> collection of home essentials.
           </motion.h3>
         </div>
 
@@ -495,7 +578,7 @@ const Categories = ({ setCategoryFilter }: { setCategoryFilter: (cat: string) =>
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <div className="w-10 h-10 rounded-xl bg-brand-accent/90 backdrop-blur-md flex items-center justify-center text-white mb-3 transform -translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-brand-green/90 backdrop-blur-md flex items-center justify-center text-white mb-3 transform -translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                     {cat.icon}
                   </div>
                   <p className="text-white font-black uppercase tracking-widest text-[10px] leading-tight">
@@ -513,140 +596,488 @@ const Categories = ({ setCategoryFilter }: { setCategoryFilter: (cat: string) =>
 
 const ProductShowcase = ({ filter, setFilter }: { filter: string, setFilter: (cat: string) => void }) => {
   const [sortBy, setSortBy] = useState('default');
+  const [brandFilter, setBrandFilter] = useState('All');
+  const [conditionFilter, setConditionFilter] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showFilters, setShowFilters] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
   const products = [
-    { name: "Samsung 55\" 4K UHD Smart TV", category: "TVs", price: "₹34,999", oldPrice: "₹64,900", discount: "46%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&q=80&w=800" },
-    { name: "LG 8kg Front Load Washing Machine", category: "Washing Machines", price: "₹24,999", oldPrice: "₹42,900", discount: "41%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1582733775062-eb9217dfd501?auto=format&fit=crop&q=80&w=800" },
-    { name: "Whirlpool 265L Double Door Fridge", category: "Refrigerators", price: "₹18,999", oldPrice: "₹32,990", discount: "42%", condition: "Refurbished", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" },
-    { name: "Daikin 1.5 Ton 5 Star Inverter AC", category: "AC & Coolers", price: "₹32,999", oldPrice: "₹54,999", discount: "40%", condition: "Open Box", img: "https://images.unsplash.com/photo-1631545729918-46c9756a7ca7?auto=format&fit=crop&q=80&w=800" },
-    { name: "Panasonic 27L Convection Microwave", category: "Microwaves", price: "₹12,499", oldPrice: "₹19,990", discount: "37%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800" },
-    { name: "Prestige 3 Jar Mixer Grinder", category: "Mixer Grinders", price: "₹2,999", oldPrice: "₹5,499", discount: "45%", condition: "Refurbished", img: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&q=80&w=800" },
-    { name: "Havells 25L Storage Water Heater", category: "Water Heaters", price: "₹7,499", oldPrice: "₹12,990", discount: "42%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1585130401366-fe05a8d813c4?auto=format&fit=crop&q=80&w=800" },
-    { name: "Crompton High Speed Ceiling Fan", category: "Fans", price: "₹1,899", oldPrice: "₹3,499", discount: "46%", condition: "Open Box", img: "https://images.unsplash.com/photo-1591193516411-960fd76baaf2?auto=format&fit=crop&q=80&w=800" },
-    { name: "Symphony 70L Desert Air Cooler", category: "AC & Coolers", price: "₹9,999", oldPrice: "₹15,900", discount: "37%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80&w=800" },
-    { name: "Sony Bravia 65\" OLED TV", category: "TVs", price: "₹89,999", oldPrice: "₹1,49,900", discount: "40%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1552975084-6e027cd345c2?auto=format&fit=crop&q=80&w=800" },
-    { name: "IFB 7kg Fully Automatic Washer", category: "Washing Machines", price: "₹19,499", oldPrice: "₹31,900", discount: "39%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1567113463300-102550d235c5?auto=format&fit=crop&q=80&w=800" }
+    { name: "Samsung 55\" 4K UHD Smart TV", brand: "Samsung", category: "TVs", price: "₹34,999", oldPrice: "₹64,900", discount: "46%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&q=80&w=800", desc: "Experience stunning 4K resolution with this Samsung Smart TV. Features include HDR, multiple HDMI ports, and built-in streaming apps.", warranty: "1-Year Limited Warranty" },
+    { name: "LG 8kg Front Load Washing Machine", brand: "LG", category: "Washing Machines", price: "₹24,999", oldPrice: "₹42,900", discount: "41%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1582733775062-eb9217dfd501?auto=format&fit=crop&q=80&w=800", desc: "Energy-efficient front load washing machine from LG. Features 6 Motion Direct Drive technology for a gentle yet powerful wash.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "Whirlpool 265L Double Door Fridge", brand: "Whirlpool", category: "Refrigerators", price: "₹18,999", oldPrice: "₹32,990", discount: "42%", condition: "Refurbished", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800", desc: "Spacious double door refrigerator with IntelliFresh technology. Keeps your food fresh for longer with adaptive intelligence.", warranty: "1-Year Limited Warranty" },
+    { name: "Daikin 1.5 Ton 5 Star Inverter AC", brand: "Daikin", category: "AC & Coolers", price: "₹32,999", oldPrice: "₹54,999", discount: "40%", condition: "Open Box", img: "https://images.unsplash.com/photo-1631545729918-46c9756a7ca7?auto=format&fit=crop&q=80&w=800", desc: "Stay cool with this energy-efficient Daikin AC. Features Econo mode and Coanda airflow for maximum comfort.", warranty: "1-Year Limited Warranty" },
+    { name: "Panasonic 27L Convection Microwave", brand: "Panasonic", category: "Microwaves", price: "₹12,499", oldPrice: "₹19,990", discount: "37%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800", desc: "Versatile convection microwave for all your cooking needs. Features auto-cook menus and a spacious interior.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "Prestige 3 Jar Mixer Grinder", brand: "Prestige", category: "Mixer Grinders", price: "₹2,999", oldPrice: "₹5,499", discount: "45%", condition: "Refurbished", img: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&q=80&w=800", desc: "Powerful mixer grinder with 3 stainless steel jars. Perfect for grinding spices, making chutneys, and more.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "Sony Bravia 65\" OLED TV", brand: "Sony", category: "TVs", price: "₹89,999", oldPrice: "₹1,49,900", discount: "40%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1552975084-6e027cd345c2?auto=format&fit=crop&q=80&w=800", desc: "Immerse yourself in cinematic visuals with this Sony OLED TV. Features Acoustic Surface Audio+ and XR Cognitive Processor.", warranty: "1-Year Limited Warranty" },
+    { name: "IFB 7kg Fully Automatic Washer", brand: "IFB", category: "Washing Machines", price: "₹19,499", oldPrice: "₹31,900", discount: "39%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1567113463300-102550d235c5?auto=format&fit=crop&q=80&w=800", desc: "Fully automatic washing machine with 2D wash system. Ensures deep cleaning and care for your fabrics.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "Bosch 12 Place Setting Dishwasher", brand: "Bosch", category: "Washing Machines", price: "₹28,999", oldPrice: "₹45,900", discount: "37%", condition: "Open Box", img: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=800", desc: "Effortless dishwashing with this Bosch dishwasher. Features multiple wash programs and a quiet operation.", warranty: "1-Year Limited Warranty" },
+    { name: "Haier 531L Side-by-Side Fridge", brand: "Haier", category: "Refrigerators", price: "₹45,999", oldPrice: "₹79,990", discount: "43%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1571175432270-ef02d9bc9445?auto=format&fit=crop&q=80&w=800", desc: "Luxurious side-by-side refrigerator with Twin Inverter technology. Offers ample storage and uniform cooling.", warranty: "1-Year Limited Warranty" },
+    { name: "Philips 750W Mixer Grinder", brand: "Philips", category: "Mixer Grinders", price: "₹4,499", oldPrice: "₹7,999", discount: "44%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1585238341267-1cfec2046a55?auto=format&fit=crop&q=80&w=800", desc: "High-performance mixer grinder with a powerful 750W motor. Comes with leak-proof jars and a sturdy design.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "OnePlus 50\" 4K Smart Android TV", brand: "OnePlus", category: "TVs", price: "₹28,999", oldPrice: "₹49,999", discount: "42%", condition: "Open Box", img: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=800", desc: "Smart Android TV with Gamma Engine for enhanced picture quality. Features Dolby Audio and multiple connectivity options.", warranty: "1-Year Limited Warranty" },
+    { name: "Samsung 65\" QLED 4K TV", brand: "Samsung", category: "TVs", price: "₹74,999", oldPrice: "₹1,24,900", discount: "40%", condition: "Refurbished", img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&q=80&w=800", desc: "Quantum Dot technology for vibrant colors. This QLED TV offers a premium viewing experience with HDR10+.", warranty: "1-Year Limited Warranty" },
+    { name: "LG 360L Inverter Fridge", brand: "LG", category: "Refrigerators", price: "₹31,999", oldPrice: "₹48,990", discount: "35%", condition: "Open Box", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800", desc: "Inverter Linear Compressor for energy efficiency. This LG fridge keeps your food fresh and crisp for days.", warranty: "1-Year Limited Warranty" },
+    { name: "Whirlpool 7.5kg Top Load Washer", brand: "Whirlpool", category: "Washing Machines", price: "₹16,499", oldPrice: "₹26,900", discount: "38%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1582733775062-eb9217dfd501?auto=format&fit=crop&q=80&w=800", desc: "Top load washing machine with 6th Sense technology. Automatically senses the load and adjusts the wash cycle.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "Sony 55\" 4K HDR Google TV", brand: "Sony", category: "TVs", price: "₹42,999", oldPrice: "₹69,900", discount: "38%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1552975084-6e027cd345c2?auto=format&fit=crop&q=80&w=800", desc: "Google TV with 4K X-Reality PRO for upscaling content. Features Dolby Vision and Atmos for an immersive experience.", warranty: "1-Year Limited Warranty" },
+    { name: "Daikin 1 Ton 3 Star Split AC", brand: "Daikin", category: "AC & Coolers", price: "₹26,999", oldPrice: "₹42,900", discount: "37%", condition: "Refurbished", img: "https://images.unsplash.com/photo-1631545729918-46c9756a7ca7?auto=format&fit=crop&q=80&w=800", desc: "Compact and powerful split AC from Daikin. Features PM2.5 filter and power chill mode for quick cooling.", warranty: "1-Year Limited Warranty" },
+    { name: "Panasonic 20L Solo Microwave", brand: "Panasonic", category: "Microwaves", price: "₹5,999", oldPrice: "₹9,990", discount: "40%", condition: "Open Box", img: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800", desc: "Perfect for small families or individuals. This solo microwave is ideal for reheating and simple cooking.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "Prestige 500W Mixer Grinder", brand: "Prestige", category: "Mixer Grinders", price: "₹1,999", oldPrice: "₹3,499", discount: "43%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&q=80&w=800", desc: "Budget-friendly mixer grinder with 3 jars. Durable and efficient for daily kitchen tasks.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "IFB 6kg Front Load Washer", brand: "IFB", category: "Washing Machines", price: "₹17,999", oldPrice: "₹28,900", discount: "38%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1567113463300-102550d235c5?auto=format&fit=crop&q=80&w=800", desc: "Compact front load washer with Aqua Energie technology. Protects your clothes and ensures a thorough wash.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "Haier 195L Single Door Fridge", brand: "Haier", category: "Refrigerators", price: "₹12,999", oldPrice: "₹19,990", discount: "35%", condition: "Refurbished", img: "https://images.unsplash.com/photo-1571175432270-ef02d9bc9445?auto=format&fit=crop&q=80&w=800", desc: "Single door fridge with 1-hour icing technology. Energy-efficient and stylish for small kitchens.", warranty: "1-Year Limited Warranty" },
+    { name: "Philips Air Fryer 4.1L", brand: "Philips", category: "Mixer Grinders", price: "₹6,999", oldPrice: "₹11,999", discount: "42%", condition: "Open Box", img: "https://images.unsplash.com/photo-1585238341267-1cfec2046a55?auto=format&fit=crop&q=80&w=800", desc: "Healthy cooking with up to 90% less fat. This air fryer features Rapid Air technology for crispy results.", warranty: "6-Month Manufacturer Warranty" },
+    { name: "OnePlus 43\" Full HD Smart TV", brand: "OnePlus", category: "TVs", price: "₹21,999", oldPrice: "₹34,999", discount: "37%", condition: "Factory Second", img: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=800", desc: "Full HD smart TV with OxygenPlay for discovering content. Features 20W speakers with Dolby Audio.", warranty: "1-Year Limited Warranty" },
+    { name: "Bosch 8kg Front Load Washer", brand: "Bosch", category: "Washing Machines", price: "₹32,999", oldPrice: "₹52,900", discount: "38%", condition: "Surplus Stock", img: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=800", desc: "Premium front load washer with Anti-Vibration design. Features VarioDrum for gentle and effective cleaning.", warranty: "1-Year Limited Warranty" }
   ];
 
-  const categories = ['All', 'TVs', 'Washing Machines', 'Refrigerators', 'AC & Coolers', 'Microwaves', 'Mixer Grinders', 'Water Heaters', 'Fans'];
+  const categories = ['All', 'TVs', 'Washing Machines', 'Refrigerators', 'AC & Coolers', 'Microwaves', 'Mixer Grinders'];
+  const brands = ['All', ...new Set(products.map(p => p.brand))].sort();
+  const conditions = ['All', 'Factory Second', 'Surplus Stock', 'Refurbished', 'Open Box'];
 
   const parsePrice = (priceStr: string) => parseInt(priceStr.replace(/[₹,]/g, ''));
   const parseDiscount = (discountStr: string) => parseInt(discountStr.replace('%', ''));
 
   const filteredProducts = useMemo(() => {
-    let result = filter === 'All' ? products : products.filter(p => p.category === filter);
+    let result = products;
+    
+    if (filter !== 'All') {
+      result = result.filter(p => p.category === filter);
+    }
+    
+    if (brandFilter !== 'All') {
+      result = result.filter(p => p.brand === brandFilter);
+    }
+    
+    if (conditionFilter !== 'All') {
+      result = result.filter(p => p.condition === conditionFilter);
+    }
+
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(p => 
+        p.name.toLowerCase().includes(query) || 
+        p.brand.toLowerCase().includes(query) || 
+        p.category.toLowerCase().includes(query)
+      );
+    }
     
     if (sortBy === 'price-low') {
       result = [...result].sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    } else if (sortBy === 'price-high') {
+      result = [...result].sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
     } else if (sortBy === 'discount') {
       result = [...result].sort((a, b) => parseDiscount(b.discount) - parseDiscount(a.discount));
     }
     
     return result;
-  }, [filter, sortBy]);
+  }, [filter, brandFilter, conditionFilter, searchQuery, sortBy]);
+
+  const clearFilters = () => {
+    setFilter('All');
+    setBrandFilter('All');
+    setConditionFilter('All');
+    setSearchQuery('');
+    setSortBy('default');
+  };
 
   return (
-    <section id="offers" className="py-32 bg-white dark:bg-slate-950">
+    <section id="offers" className="py-32 bg-white dark:bg-brand-dark">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
-          <div className="max-w-2xl">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-10">
+          <div className="max-w-2xl w-full">
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-brand-accent font-black uppercase tracking-[0.4em] text-xs mb-4 block"
+              className="text-brand-green font-black uppercase tracking-[0.4em] text-xs mb-4 block"
             >
               Exclusive Deals
             </motion.span>
-            <h2 className="text-5xl md:text-6xl font-display font-black mb-8 dark:text-white">Featured <span className="text-brand-green">Offers</span></h2>
-            <div className="flex flex-wrap gap-3">
+            <h2 className="text-5xl md:text-6xl font-display font-black mb-8 text-brand-dark dark:text-white">Featured <span className="text-brand-green">Offers</span></h2>
+            
+            <div className="flex flex-wrap gap-3 mb-8">
               {categories.map(cat => (
                 <button 
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all ${filter === cat ? 'bg-brand-green text-white shadow-lg shadow-brand-green/20' : 'bg-slate-100 dark:bg-slate-900 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800'}`}
+                  className={`px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${filter === cat ? 'bg-brand-green text-white shadow-lg shadow-brand-green/20' : 'bg-slate-100 dark:bg-slate-900 text-brand-dark/50 dark:text-white/50 hover:bg-slate-200 dark:hover:bg-slate-800'}`}
                 >
                   {cat}
                 </button>
               ))}
             </div>
+
+            <div className="relative w-full max-w-md">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+              <input 
+                type="text"
+                placeholder="Search by name, brand or category..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl pl-12 pr-6 py-4 text-xs font-bold focus:outline-none focus:border-brand-green dark:text-white transition-all"
+              />
+            </div>
           </div>
           
-          <div className="flex items-center gap-4 bg-slate-50 dark:bg-slate-900 p-2 rounded-2xl border border-slate-100 dark:border-slate-800">
-            <div className="flex items-center gap-2 px-4 border-r border-slate-200 dark:border-slate-800">
-              <Filter size={16} className="text-slate-400" />
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Sort:</span>
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center gap-2 px-4 py-3 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+              <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Showing:</span>
+              <span className="text-xs font-black dark:text-white">{filteredProducts.length} Products</span>
             </div>
-            <select 
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="bg-transparent border-none focus:ring-0 text-xs font-black uppercase tracking-widest dark:text-white cursor-pointer pr-10"
+
+            <motion.button 
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowFilters(!showFilters)}
+              className={`flex items-center gap-2 px-6 py-3 rounded-2xl border transition-all text-xs font-black uppercase tracking-widest ${showFilters ? 'bg-brand-dark text-white border-brand-dark' : 'bg-white dark:bg-slate-900 text-brand-dark dark:text-white border-slate-200 dark:border-slate-800'}`}
             >
-              <option value="default">Default</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="discount">Highest Discount</option>
-            </select>
+              <Filter size={16} />
+              {showFilters ? 'Hide Filters' : 'More Filters'}
+            </motion.button>
+
+            <div className="flex items-center gap-4 bg-slate-50 dark:bg-slate-900 p-2 rounded-2xl border border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-2 px-4 border-r border-slate-200 dark:border-slate-800">
+                <ArrowLeftRight size={16} className="text-slate-400 rotate-90" />
+                <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Sort:</span>
+              </div>
+              <select 
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="bg-transparent border-none focus:ring-0 text-xs font-black uppercase tracking-widest dark:text-white cursor-pointer pr-10"
+              >
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="discount">Highest Discount</option>
+              </select>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-          <AnimatePresence mode="popLayout">
-            {filteredProducts.map((p, i) => (
-              <motion.div 
-                layout
-                key={p.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ delay: i * 0.05 }}
-                className="group bg-white dark:bg-brand-dark/50 rounded-[2rem] overflow-hidden border border-gray-100 dark:border-white/5 hover:shadow-2xl hover:shadow-brand-green/10 transition-all duration-500"
-              >
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <img 
-                    src={p.img} 
-                    alt={p.name} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute top-4 left-4 flex flex-col gap-2">
-                    <span className="bg-brand-accent text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">
-                      {p.discount} OFF
-                    </span>
-                    <span className="bg-white/90 backdrop-blur-md text-brand-dark text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">
-                      {p.condition}
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6 md:p-8">
-                  <span className="text-brand-green font-black uppercase tracking-widest text-[10px] mb-2 block">
-                    {p.category}
-                  </span>
-                  <h3 className="text-lg md:text-xl font-display font-black mb-4 line-clamp-2 dark:text-white group-hover:text-brand-green transition-colors h-14">
-                    {p.name}
-                  </h3>
-                  
-                  <div className="flex items-end gap-3 mb-6">
-                    <span className="text-2xl md:text-3xl font-display font-black text-brand-dark dark:text-white">{p.price}</span>
-                    <span className="text-sm md:text-base text-gray-400 line-through mb-1 font-bold">{p.oldPrice}</span>
+        {/* Expanded Filters */}
+        <AnimatePresence>
+          {showFilters && (
+            <motion.div 
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="overflow-hidden mb-16"
+            >
+              <div className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-10 rounded-[2.5rem] border border-slate-100 dark:border-white/5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                  <div>
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-green mb-6">Filter by Brand</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {brands.map(brand => (
+                        <button 
+                          key={brand}
+                          onClick={() => setBrandFilter(brand)}
+                          className={`px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${brandFilter === brand ? 'bg-brand-green text-white' : 'bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-100 dark:border-slate-700 hover:border-brand-green'}`}
+                        >
+                          {brand}
+                        </button>
+                      ))}
+                    </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    <button className="bg-brand-dark dark:bg-white dark:text-brand-dark text-white py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-brand-green dark:hover:bg-brand-green dark:hover:text-white transition-colors">
-                      Details
-                    </button>
-                    <a 
-                      href={`https://wa.me/919876543210?text=I'm interested in ${p.name}`}
-                      target="_blank"
-                      className="bg-[#25D366] text-white py-3 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-colors"
+                  <div>
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-green mb-6">Filter by Condition</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {conditions.map(cond => (
+                        <button 
+                          key={cond}
+                          onClick={() => setConditionFilter(cond)}
+                          className={`px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${conditionFilter === cond ? 'bg-brand-green text-white' : 'bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-100 dark:border-slate-700 hover:border-brand-green'}`}
+                        >
+                          {cond}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col justify-end">
+                    <button 
+                      onClick={clearFilters}
+                      className="flex items-center justify-center gap-2 text-[10px] font-black uppercase tracking-widest text-brand-green hover:text-brand-dark dark:hover:text-white transition-colors"
                     >
-                      <MessageSquare size={14} fill="currentColor" />
-                      Enquire
+                      <X size={14} />
+                      Clear All Filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Active Filter Badges */}
+        {(brandFilter !== 'All' || conditionFilter !== 'All' || filter !== 'All' || searchQuery !== '') && (
+          <div className="flex flex-wrap gap-3 mb-10">
+            {filter !== 'All' && (
+              <span className="flex items-center gap-2 px-5 py-2.5 bg-brand-green/10 text-brand-green rounded-full text-[11px] font-bold uppercase tracking-widest font-accent">
+                Category: {filter}
+                <X size={14} className="cursor-pointer" onClick={() => setFilter('All')} />
+              </span>
+            )}
+            {brandFilter !== 'All' && (
+              <span className="flex items-center gap-2 px-5 py-2.5 bg-brand-green/10 text-brand-green rounded-full text-[11px] font-bold uppercase tracking-widest font-accent">
+                Brand: {brandFilter}
+                <X size={14} className="cursor-pointer" onClick={() => setBrandFilter('All')} />
+              </span>
+            )}
+            {conditionFilter !== 'All' && (
+              <span className="flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 text-blue-600 rounded-full text-[11px] font-bold uppercase tracking-widest font-accent">
+                Condition: {conditionFilter}
+                <X size={14} className="cursor-pointer" onClick={() => setConditionFilter('All')} />
+              </span>
+            )}
+            {searchQuery !== '' && (
+              <span className="flex items-center gap-2 px-5 py-2.5 bg-slate-500/10 text-slate-600 rounded-full text-[11px] font-bold uppercase tracking-widest font-accent">
+                Search: {searchQuery}
+                <X size={14} className="cursor-pointer" onClick={() => setSearchQuery('')} />
+              </span>
+            )}
+          </div>
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+          <AnimatePresence mode="popLayout">
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((p, i) => (
+                <motion.div 
+                  layout
+                  key={p.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="group bg-white dark:bg-brand-dark/50 rounded-[2rem] overflow-hidden border border-gray-100 dark:border-white/5 hover:shadow-2xl hover:shadow-brand-green/10 transition-all duration-500"
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <img 
+                      src={p.img} 
+                      alt={p.name} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute top-4 left-4 flex flex-col gap-2">
+                      <span className="bg-brand-green text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-[0.15em] shadow-lg font-accent">
+                        {p.discount} OFF
+                      </span>
+                      <span className="bg-white/95 backdrop-blur-md text-brand-dark text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-[0.15em] shadow-lg font-accent">
+                        {p.condition}
+                      </span>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-brand-dark/60 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-[0.15em] border border-white/20 font-accent">
+                        {p.brand}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 md:p-8">
+                    <span className="text-brand-green font-bold uppercase tracking-[0.2em] text-[10px] mb-3 block font-accent">
+                      {p.category}
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-display font-bold mb-4 line-clamp-2 dark:text-white group-hover:text-brand-green transition-colors h-16 leading-tight">
+                      {p.name}
+                    </h3>
+                    
+                    <div className="flex items-end gap-3 mb-8">
+                      <span className="text-3xl md:text-4xl font-display font-extrabold text-brand-dark dark:text-white tracking-tight">{p.price}</span>
+                      <span className="text-base md:text-lg text-slate-400 line-through mb-1 font-semibold">{p.oldPrice}</span>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      <button 
+                        onClick={() => setSelectedProduct(p)}
+                        className="bg-brand-dark dark:bg-white dark:text-brand-dark text-white py-4 rounded-xl text-[11px] font-bold uppercase tracking-widest hover:bg-brand-green dark:hover:bg-brand-green dark:hover:text-white transition-colors font-accent"
+                      >
+                        Details
+                      </button>
+                      <a 
+                        href={`https://wa.me/919876543210?text=I'm interested in ${p.name}`}
+                        target="_blank"
+                        className="bg-[#25D366] text-white py-4 rounded-xl text-[11px] font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-colors font-accent"
+                      >
+                        <MessageSquare size={16} fill="currentColor" />
+                        Enquire
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              ))
+            ) : (
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="col-span-full py-20 text-center"
+              >
+                <div className="w-20 h-20 bg-slate-100 dark:bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Search size={32} className="text-slate-400" />
+                </div>
+                <h3 className="text-2xl font-display font-black dark:text-white mb-4">No products found</h3>
+                <p className="text-slate-500 dark:text-slate-400 mb-8 max-w-md mx-auto">We couldn't find any products matching your current filters. Try adjusting your selection or clear all filters.</p>
+                <button 
+                  onClick={clearFilters}
+                  className="bg-brand-green text-white px-8 py-4 rounded-xl text-xs font-black uppercase tracking-widest shadow-lg shadow-brand-green/20"
+                >
+                  Clear All Filters
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Quick View Modal */}
+      <AnimatePresence>
+        {selectedProduct && (
+          <div className="fixed inset-0 z-[200] flex items-center justify-center p-6">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedProduct(null)}
+              className="absolute inset-0 bg-brand-dark/80 backdrop-blur-md"
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative w-full max-w-4xl bg-white dark:bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row"
+            >
+              <button 
+                onClick={() => setSelectedProduct(null)}
+                className="absolute top-6 right-6 z-10 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white md:text-brand-dark md:dark:text-white md:bg-gray-100 md:dark:bg-gray-800 hover:bg-brand-green hover:text-white transition-all"
+              >
+                <X size={20} />
+              </button>
+
+              <div className="w-full md:w-1/2 aspect-square md:aspect-auto">
+                <img 
+                  src={selectedProduct.img} 
+                  alt={selectedProduct.name} 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              <div className="w-full md:w-1/2 p-10 md:p-12 flex flex-col">
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <span className="bg-brand-green/10 text-brand-green text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-widest font-accent">
+                    {selectedProduct.category}
+                  </span>
+                  <span className="bg-brand-dark/10 text-brand-dark dark:text-white/10 dark:text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-widest font-accent">
+                    {selectedProduct.condition}
+                  </span>
+                  <span className="bg-brand-green/5 dark:bg-brand-green/20 text-brand-green/80 dark:text-brand-green text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-widest font-accent border border-brand-green/10">
+                    {selectedProduct.brand}
+                  </span>
+                </div>
+
+                <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 text-brand-dark dark:text-white leading-tight tracking-tight">
+                  {selectedProduct.name}
+                </h3>
+                
+                <p className="text-brand-dark/70 dark:text-white/70 mb-8 leading-relaxed font-medium text-lg">
+                  {selectedProduct.desc}
+                </p>
+
+                <div className="mb-8 p-6 bg-brand-green/5 dark:bg-brand-green/10 rounded-2xl border border-brand-green/10 dark:border-white/5">
+                  <h4 className="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-green mb-3 flex items-center gap-2 font-accent">
+                    <ShieldCheck size={16} />
+                    Warranty Details
+                  </h4>
+                  <p className="text-base font-bold text-brand-dark dark:text-white">
+                    {selectedProduct.warranty}
+                  </p>
+                </div>
+
+                <div className="mt-auto">
+                  <div className="flex items-center gap-6 mb-8">
+                    <div className="flex flex-col">
+                      <span className="text-[11px] font-bold text-brand-dark/40 dark:text-white/40 uppercase tracking-widest mb-1 font-accent">Our Price</span>
+                      <span className="text-4xl md:text-5xl font-display font-extrabold text-brand-dark dark:text-white tracking-tight">{selectedProduct.price}</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[11px] font-bold text-brand-dark/40 dark:text-white/40 uppercase tracking-widest mb-1 font-accent">MRP</span>
+                      <span className="text-xl text-brand-dark/40 dark:text-white/40 line-through font-bold">{selectedProduct.oldPrice}</span>
+                    </div>
+                    <div className="ml-auto bg-brand-green text-white px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-widest font-accent shadow-lg shadow-brand-green/20">
+                      {selectedProduct.discount} OFF
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-4">
+                    <a 
+                      href={`https://wa.me/919876543210?text=I'm interested in ${selectedProduct.name}`}
+                      target="_blank"
+                      className="bg-[#25D366] text-white py-6 rounded-2xl text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-[#128C7E] transition-all shadow-xl shadow-[#25D366]/20 font-accent"
+                    >
+                      <MessageSquare size={24} fill="currentColor" />
+                      Enquire on WhatsApp
                     </a>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+};
+
+const ProductGallery = () => {
+  const items = [
+    { name: "Televisions", img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&q=80&w=800", span: "lg:col-span-2 lg:row-span-2" },
+    { name: "Washing Machines", img: "https://images.unsplash.com/photo-1582733775062-eb9217dfd501?auto=format&fit=crop&q=80&w=800", span: "lg:col-span-1 lg:row-span-1" },
+    { name: "Refrigerators", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800", span: "lg:col-span-1 lg:row-span-1" },
+    { name: "Microwave Ovens", img: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800", span: "lg:col-span-2 lg:row-span-1" },
+    { name: "Mixer Grinders", img: "https://images.unsplash.com/photo-1585238341267-1cfec2046a55?auto=format&fit=crop&q=80&w=800", span: "lg:col-span-2 lg:row-span-1" }
+  ];
+
+  return (
+    <section className="py-32 bg-slate-50 dark:bg-slate-900/30">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <motion.span 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-brand-green font-black uppercase tracking-[0.4em] text-xs mb-4 block"
+          >
+            Visual Experience
+          </motion.span>
+          <h2 className="text-4xl md:text-6xl font-display font-black dark:text-white mb-6">Premium <span className="text-brand-green">Showcase</span></h2>
+          <p className="text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto">Discover the perfect blend of technology and design with our curated selection of high-end home appliances.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 h-auto lg:h-[800px]">
+          {items.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className={`relative overflow-hidden rounded-[3rem] group min-h-[300px] ${item.span}`}
+            >
+              <img 
+                src={item.img} 
+                alt={item.name} 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+              <div className="absolute bottom-10 left-10">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <h3 className="text-2xl md:text-3xl font-display font-bold text-white uppercase tracking-tight mb-2">{item.name}</h3>
+                  <div className="w-12 h-1 bg-brand-green rounded-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -676,7 +1107,7 @@ const AboutTrust = () => {
               <div className="absolute bottom-12 left-12 right-12">
                 <div className="bg-white/10 backdrop-blur-xl p-8 rounded-[2.5rem] border border-white/20">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-brand-accent flex items-center justify-center text-white">
+                    <div className="w-12 h-12 rounded-2xl bg-brand-green flex items-center justify-center text-white">
                       <ShieldCheck size={28} />
                     </div>
                     <h4 className="text-2xl font-display font-black text-white">Certified Quality</h4>
@@ -686,19 +1117,19 @@ const AboutTrust = () => {
               </div>
             </motion.div>
             <div className="absolute -top-12 -right-12 w-64 h-64 bg-brand-green/10 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-brand-accent/10 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-brand-green/10 rounded-full blur-3xl -z-10"></div>
           </div>
 
           <div>
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-brand-accent font-black uppercase tracking-[0.4em] text-xs mb-6 block"
+              className="text-brand-green font-bold uppercase tracking-[0.3em] text-xs mb-6 block font-accent"
             >
               The Green Nest Standard
             </motion.span>
-            <h2 className="text-5xl md:text-7xl font-display font-black mb-10 dark:text-white leading-[1.1]">Direct from <br />Manufacturers. <br /><span className="text-brand-green">Honest Pricing.</span></h2>
-            <p className="text-xl text-slate-500 dark:text-slate-400 mb-12 leading-relaxed font-medium">
+            <h2 className="text-5xl md:text-8xl font-display font-extrabold mb-10 text-brand-dark dark:text-white leading-[0.95] tracking-tighter">Direct from <br />Manufacturers. <br /><span className="text-brand-green">Honest Pricing.</span></h2>
+            <p className="text-xl text-brand-dark/70 dark:text-white/70 mb-12 leading-relaxed font-medium">
               We source directly from manufacturers and authorized distributors, offering fully functional appliances at significantly reduced prices. Our mission is to provide high-end home comfort without the premium price tag.
             </p>
             
@@ -721,8 +1152,8 @@ const AboutTrust = () => {
                     <CheckCircle size={20} />
                   </div>
                   <div>
-                    <h4 className="font-display font-black text-lg dark:text-white mb-2">{item.title}</h4>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">{item.desc}</p>
+                    <h4 className="font-display font-bold text-lg text-brand-dark dark:text-white mb-2">{item.title}</h4>
+                    <p className="text-sm text-brand-dark/60 dark:text-white/60 font-medium leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -744,9 +1175,27 @@ const AboutTrust = () => {
 
 const StoreLocations = () => {
   const stores = [
-    { name: "Indiranagar Experience Hub", address: "123, 100 Feet Rd, Indiranagar, Bangalore", timing: "10:00 AM - 9:00 PM", phone: "+91 98765 43210" },
-    { name: "Whitefield Mega Store", address: "45, ITPL Main Rd, Whitefield, Bangalore", timing: "10:30 AM - 9:30 PM", phone: "+91 98765 43211" },
-    { name: "Jayanagar Outlet", address: "89, 4th Block, Jayanagar, Bangalore", timing: "10:00 AM - 8:30 PM", phone: "+91 98765 43212" }
+    { 
+      name: "Indiranagar Experience Hub", 
+      address: "123, 100 Feet Rd, Indiranagar, Bangalore", 
+      timing: "10:00 AM - 9:00 PM", 
+      phone: "+91 98765 43210",
+      img: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800"
+    },
+    { 
+      name: "Whitefield Mega Store", 
+      address: "45, ITPL Main Rd, Whitefield, Bangalore", 
+      timing: "10:30 AM - 9:30 PM", 
+      phone: "+91 98765 43211",
+      img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800"
+    },
+    { 
+      name: "Jayanagar Outlet", 
+      address: "89, 4th Block, Jayanagar, Bangalore", 
+      timing: "10:00 AM - 8:30 PM", 
+      phone: "+91 98765 43212",
+      img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800"
+    }
   ];
 
   return (
@@ -756,11 +1205,11 @@ const StoreLocations = () => {
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-brand-accent font-black uppercase tracking-[0.4em] text-xs mb-4 block"
+            className="text-brand-green font-accent font-bold uppercase tracking-[0.5em] text-xs mb-4 block"
           >
             Our Presence
           </motion.span>
-          <h2 className="text-5xl md:text-6xl font-display font-black mb-8 dark:text-white">Visit Our <span className="text-brand-green">Stores</span></h2>
+          <h2 className="text-5xl md:text-7xl font-display font-extrabold mb-8 dark:text-white tracking-tight">Visit Our <span className="text-brand-green">Stores</span></h2>
           <div className="w-24 h-1 bg-brand-green mx-auto rounded-full"></div>
         </div>
 
@@ -769,31 +1218,42 @@ const StoreLocations = () => {
             <motion.div 
               key={i}
               whileHover={{ y: -15 }}
-              className="bg-brand-bg dark:bg-slate-900 p-12 rounded-[3.5rem] shadow-xl hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-800 group"
+              className="bg-brand-bg dark:bg-slate-900 rounded-[3.5rem] shadow-xl hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-800 group overflow-hidden"
             >
-              <div className="w-16 h-16 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center mb-10 group-hover:bg-brand-green group-hover:text-white transition-all duration-500">
-                <MapPin size={32} />
+              <div className="h-48 overflow-hidden relative">
+                <img 
+                  src={s.img} 
+                  alt={s.name} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors"></div>
               </div>
-              <h3 className="text-3xl font-display font-black mb-6 dark:text-white leading-tight">{s.name}</h3>
-              <p className="text-slate-500 dark:text-slate-400 mb-8 font-medium leading-relaxed">{s.address}</p>
-              <div className="space-y-4 mb-12">
-                <div className="flex items-center gap-3 text-slate-400 text-sm font-bold">
-                  <Zap size={16} className="text-brand-accent" />
-                  <span>Open: {s.timing}</span>
+              <div className="p-10">
+                <div className="w-12 h-12 rounded-xl bg-brand-green/10 text-brand-green flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-all duration-500">
+                  <MapPin size={24} />
                 </div>
-                <div className="flex items-center gap-3 text-slate-400 text-sm font-bold">
-                  <Phone size={16} className="text-brand-accent" />
-                  <span>{s.phone}</span>
+                <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 dark:text-white leading-tight tracking-tight">{s.name}</h3>
+                <p className="text-slate-500 dark:text-slate-400 mb-6 font-medium leading-relaxed text-base">{s.address}</p>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest font-accent">
+                    <Zap size={16} className="text-brand-green" />
+                    <span>Open: {s.timing}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest font-accent">
+                    <Phone size={16} className="text-brand-green" />
+                    <span>{s.phone}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <button className="w-full py-4 rounded-2xl bg-brand-green text-white font-black uppercase tracking-widest text-xs flex items-center justify-center gap-2 shadow-lg shadow-brand-green/20">
-                  <MapPin size={16} />
-                  Open in Maps
-                </button>
-                <button className="w-full py-4 rounded-2xl bg-white dark:bg-slate-800 text-brand-dark dark:text-white font-black uppercase tracking-widest text-xs border border-slate-200 dark:border-slate-700">
-                  Call Store
-                </button>
+                <div className="flex flex-col gap-3">
+                  <button className="w-full py-5 rounded-xl bg-brand-green text-white font-bold uppercase tracking-widest text-[11px] flex items-center justify-center gap-2 shadow-lg shadow-brand-green/20 font-accent">
+                    <MapPin size={16} />
+                    Open in Maps
+                  </button>
+                  <button className="w-full py-5 rounded-xl bg-white dark:bg-slate-800 text-brand-dark dark:text-white font-bold uppercase tracking-widest text-[11px] border border-slate-200 dark:border-slate-700 font-accent">
+                    Call Store
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -818,9 +1278,9 @@ const Testimonials = () => {
             <div className="flex text-amber-400">
               {[...Array(5)].map((_, i) => <Star key={i} size={22} fill="currentColor" />)}
             </div>
-            <span className="font-black text-brand-dark dark:text-white uppercase tracking-widest text-sm">4.9/5 Google Rating</span>
+            <span className="font-bold text-brand-dark dark:text-white uppercase tracking-[0.2em] text-sm font-accent">4.9/5 Google Rating</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-display font-black mb-8 dark:text-white">Trusted by <span className="text-brand-green">5000+</span> <br />Happy Customers</h2>
+          <h2 className="text-5xl md:text-7xl font-display font-extrabold mb-8 dark:text-white tracking-tight">Trusted by <span className="text-brand-green">5000+</span> <br />Happy Customers</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -837,11 +1297,11 @@ const Testimonials = () => {
               <div className="flex items-center gap-5 mb-10">
                 <img src={r.img} alt={r.name} className="w-16 h-16 rounded-full object-cover border-4 border-brand-green/10" referrerPolicy="no-referrer" />
                 <div>
-                  <h4 className="text-xl font-display font-black dark:text-white">{r.name}</h4>
-                  <p className="text-xs text-brand-green font-black uppercase tracking-widest">{r.role}</p>
+                  <h4 className="text-xl font-display font-bold dark:text-white tracking-tight">{r.name}</h4>
+                  <p className="text-[10px] text-brand-green font-bold uppercase tracking-[0.2em] font-accent">{r.role}</p>
                 </div>
               </div>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic text-lg font-medium">"{r.text}"</p>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic text-xl font-medium">"{r.text}"</p>
             </motion.div>
           ))}
         </div>
@@ -854,32 +1314,32 @@ const CTASection = () => {
   return (
     <section className="py-32 bg-brand-green relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-full bg-brand-accent/10 blur-[150px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-full bg-brand-green/10 blur-[150px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-display font-black text-white mb-10 leading-tight"
+          className="text-5xl md:text-8xl font-display font-extrabold text-white mb-10 leading-[1.1] tracking-tighter"
         >
           Upgrade Your Home <br />for Less Today
         </motion.h2>
-        <p className="text-xl md:text-2xl text-white/80 mb-16 max-w-3xl mx-auto font-medium leading-relaxed">
+        <p className="text-xl md:text-2xl text-white/90 mb-16 max-w-3xl mx-auto font-normal leading-relaxed">
           Don't settle for less. Get the premium appliances you've always wanted at prices you'll love. Visit our store or enquire online.
         </p>
         <div className="flex flex-col sm:flex-row gap-8 justify-center">
           <motion.button 
             whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.9)' }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white text-brand-green px-12 py-6 rounded-2xl text-lg font-black uppercase tracking-widest flex items-center justify-center gap-4 shadow-2xl"
+            className="bg-white text-brand-green px-12 py-6 rounded-2xl text-lg font-bold uppercase tracking-widest flex items-center justify-center gap-4 shadow-2xl font-accent"
           >
             <Phone size={24} />
             Call Now
           </motion.button>
           <motion.button 
-            whileHover={{ scale: 1.05, backgroundColor: '#e65f00' }}
+            whileHover={{ scale: 1.05, backgroundColor: '#0A2A2B' }}
             whileTap={{ scale: 0.95 }}
-            className="bg-brand-accent text-white px-12 py-6 rounded-2xl text-lg font-black uppercase tracking-widest flex items-center justify-center gap-4 shadow-2xl"
+            className="bg-brand-green text-white px-12 py-6 rounded-2xl text-lg font-bold uppercase tracking-widest flex items-center justify-center gap-4 shadow-2xl font-accent"
           >
             <MessageSquare size={24} />
             WhatsApp
@@ -887,7 +1347,7 @@ const CTASection = () => {
           <motion.button 
             whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.2)' }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-12 py-6 rounded-2xl text-lg font-black uppercase tracking-widest flex items-center justify-center gap-4 transition-all"
+            className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-12 py-6 rounded-2xl text-lg font-bold uppercase tracking-widest flex items-center justify-center gap-4 transition-all font-accent"
           >
             <Store size={24} />
             Visit Store
@@ -906,20 +1366,20 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-32 bg-white dark:bg-slate-950">
+    <section id="blog" className="py-32 bg-white dark:bg-brand-dark">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div>
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-brand-accent font-black uppercase tracking-[0.4em] text-xs mb-4 block"
+              className="text-brand-green font-accent font-bold uppercase tracking-[0.5em] text-xs mb-4 block"
             >
               Expert Advice
             </motion.span>
-            <h2 className="text-5xl md:text-6xl font-display font-black dark:text-white leading-tight">Buying <span className="text-brand-green">Guides</span></h2>
+            <h2 className="text-5xl md:text-7xl font-display font-extrabold text-brand-dark dark:text-white leading-tight tracking-tight">Buying <span className="text-brand-green">Guides</span></h2>
           </div>
-          <button className="text-brand-green font-black uppercase tracking-widest text-sm flex items-center gap-3 group">
+          <button className="text-brand-green font-bold uppercase tracking-widest text-sm flex items-center gap-3 group font-accent">
             View All Posts <ArrowRight className="group-hover:translate-x-2 transition-transform" />
           </button>
         </div>
@@ -937,8 +1397,8 @@ const Blog = () => {
               <div className="h-80 rounded-[3rem] overflow-hidden mb-8 shadow-xl">
                 <img src={p.img} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
               </div>
-              <p className="text-brand-green font-black uppercase tracking-widest text-xs mb-4">{p.date}</p>
-              <h3 className="text-2xl font-display font-black dark:text-white group-hover:text-brand-green transition-colors leading-tight">{p.title}</h3>
+              <p className="text-brand-green font-bold uppercase tracking-[0.2em] text-xs mb-4 font-accent">{p.date}</p>
+              <h3 className="text-2xl md:text-3xl font-display font-bold dark:text-white group-hover:text-brand-green transition-colors leading-tight tracking-tight">{p.title}</h3>
             </motion.article>
           ))}
         </div>
@@ -958,7 +1418,7 @@ const Contact = () => {
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-brand-accent font-black uppercase tracking-[0.4em] text-xs mb-6 block"
+              className="text-brand-green font-black uppercase tracking-[0.4em] text-xs mb-6 block"
             >
               Connect With Us
             </motion.span>
@@ -1055,11 +1515,11 @@ const Footer = () => {
               <div className="bg-brand-green p-2 rounded-xl">
                 <Leaf className="text-white w-6 h-6" />
               </div>
-              <span className="text-2xl font-display font-black tracking-tighter">
-                GREEN<span className="text-brand-accent">NEST</span>
+              <span className="text-2xl font-display font-bold tracking-tighter">
+                GREEN<span className="text-brand-green">NEST</span>
               </span>
             </div>
-            <p className="text-slate-400 text-lg leading-relaxed mb-10 max-w-sm">
+            <p className="text-slate-400 text-lg leading-relaxed mb-10 max-w-sm font-normal">
               India's most trusted destination for premium refurbished and surplus home appliances. Quality you can feel, prices you'll love.
             </p>
             <div className="flex gap-4">
@@ -1067,7 +1527,7 @@ const Footer = () => {
                 <motion.a 
                   key={i}
                   href="#" 
-                  whileHover={{ y: -5, backgroundColor: '#00FF94', color: '#0F3D3E' }}
+                  whileHover={{ y: -5, backgroundColor: '#0F3D3E', color: '#FFFFFF' }}
                   className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300"
                 >
                   <Icon size={20} />
@@ -1078,12 +1538,12 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h4 className="text-sm font-black uppercase tracking-[0.3em] text-brand-green mb-10">Company</h4>
+            <h4 className="text-sm font-bold uppercase tracking-[0.3em] text-brand-green mb-10 font-accent">Company</h4>
             <ul className="space-y-4">
               {['About Us', 'Our Stores', 'Sustainability', 'Careers', 'Contact'].map(item => (
                 <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-slate-400 hover:text-white transition-colors font-medium flex items-center group">
-                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-accent mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-slate-400 hover:text-white transition-colors font-medium flex items-center group text-base">
+                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-green mr-0 group-hover:mr-2 transition-all duration-300"></span>
                     {item}
                   </a>
                 </li>
@@ -1093,13 +1553,19 @@ const Footer = () => {
 
           {/* Categories */}
           <div className="lg:col-span-2">
-            <h4 className="text-sm font-black uppercase tracking-[0.3em] text-brand-green mb-10">Shop</h4>
+            <h4 className="text-sm font-bold uppercase tracking-[0.3em] text-brand-green mb-10 font-accent">Shop</h4>
             <ul className="space-y-4">
-              {['Televisions', 'Washing Machines', 'Refrigerators', 'Air Conditioners', 'Kitchen'].map(item => (
-                <li key={item}>
-                  <a href="#categories" className="text-slate-400 hover:text-white transition-colors font-medium flex items-center group">
-                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-accent mr-0 group-hover:mr-2 transition-all duration-300"></span>
-                    {item}
+              {[
+                { name: 'Televisions', icon: <Tv size={14} /> },
+                { name: 'Washing Machines', icon: <Waves size={14} /> },
+                { name: 'Refrigerators', icon: <Refrigerator size={14} /> },
+                { name: 'Air Conditioners', icon: <Wind size={14} /> },
+                { name: 'Kitchen', icon: <UtensilsCrossed size={14} /> }
+              ].map(item => (
+                <li key={item.name}>
+                  <a href="#categories" className="text-slate-400 hover:text-white transition-colors font-medium flex items-center group gap-2 text-base">
+                    <span className="text-brand-green opacity-0 group-hover:opacity-100 transition-opacity">{item.icon}</span>
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -1108,19 +1574,19 @@ const Footer = () => {
 
           {/* Support */}
           <div className="lg:col-span-4">
-            <h4 className="text-sm font-black uppercase tracking-[0.3em] text-brand-green mb-10">Newsletter</h4>
-            <p className="text-slate-400 mb-8 font-medium">Get exclusive early access to our biggest surplus drops and appliance guides.</p>
+            <h4 className="text-sm font-bold uppercase tracking-[0.3em] text-brand-green mb-10 font-accent">Newsletter</h4>
+            <p className="text-slate-400 mb-8 font-normal text-base">Get exclusive early access to our biggest surplus drops and appliance guides.</p>
             <form className="relative group">
               <input 
                 type="email" 
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-brand-green transition-all font-bold placeholder:text-slate-600" 
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-brand-green transition-all font-bold placeholder:text-slate-700 text-base" 
                 placeholder="Enter your email" 
               />
-              <button className="absolute right-2 top-2 bottom-2 bg-brand-green text-white px-8 rounded-xl hover:bg-brand-accent transition-all font-black uppercase tracking-widest text-[10px] shadow-lg shadow-brand-green/20">
+              <button className="absolute right-2 top-2 bottom-2 bg-brand-green text-white px-8 rounded-xl hover:bg-white hover:text-brand-green transition-all font-bold uppercase tracking-widest text-[11px] shadow-lg shadow-brand-green/20 font-accent">
                 Subscribe
               </button>
             </form>
-            <div className="mt-8 flex items-center gap-4 text-slate-500 text-xs font-bold">
+            <div className="mt-8 flex items-center gap-4 text-slate-500 text-xs font-bold font-accent">
               <div className="flex -space-x-2">
                 {[1, 2, 3].map(i => (
                   <div key={i} className="w-8 h-8 rounded-full border-2 border-brand-dark bg-slate-800 flex items-center justify-center overflow-hidden">
@@ -1135,10 +1601,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-slate-500 text-xs font-bold uppercase tracking-widest">
+          <div className="text-slate-500 text-xs font-bold uppercase tracking-[0.2em] font-accent">
             © {currentYear} Green Nest Private Limited. All rights reserved.
           </div>
-          <div className="flex flex-wrap justify-center gap-8 text-slate-500 text-xs font-bold uppercase tracking-widest">
+          <div className="flex flex-wrap justify-center gap-8 text-slate-500 text-xs font-bold uppercase tracking-[0.2em] font-accent">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-white transition-colors">Warranty Policy</a>
@@ -1156,6 +1622,13 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState('All');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setShowBackToTop(window.scrollY > 500);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -1164,18 +1637,39 @@ export default function App() {
 
   return (
     <div className={`min-h-screen selection:bg-brand-green selection:text-white ${darkMode ? 'dark' : ''}`}>
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
-      <Hero />
-      <ValuePropStrip />
-      <Categories setCategoryFilter={setCategoryFilter} />
-      <ProductShowcase filter={categoryFilter} setFilter={setCategoryFilter} />
-      <AboutTrust />
-      <StoreLocations />
-      <Testimonials />
-      <CTASection />
-      <Blog />
-      <Contact />
+      <header>
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
+      </header>
+      <main>
+        <Hero />
+        <ValuePropStrip />
+        <WhyChooseUs />
+        <Categories setCategoryFilter={setCategoryFilter} />
+        <ProductShowcase filter={categoryFilter} setFilter={setCategoryFilter} />
+        <ProductGallery />
+        <AboutTrust />
+        <StoreLocations />
+        <Testimonials />
+        <CTASection />
+        <Blog />
+        <Contact />
+      </main>
       <Footer />
+
+      {/* Back to Top Button */}
+      <AnimatePresence>
+        {showBackToTop && (
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="fixed bottom-24 right-6 z-[150] w-12 h-12 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl shadow-2xl flex items-center justify-center text-brand-dark dark:text-white hover:bg-brand-green hover:text-white transition-all group"
+          >
+            <ChevronDown className="rotate-180 group-hover:-translate-y-1 transition-transform" size={24} />
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       {/* Sticky WhatsApp Button */}
       <AnimatePresence>
@@ -1191,7 +1685,7 @@ export default function App() {
             className="fixed bottom-10 right-10 z-[100] w-16 h-16 md:w-20 md:h-20 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl shadow-green-900/40"
           >
             <MessageSquare size={32} fill="currentColor" className="md:w-10 md:h-10" />
-            <span className="absolute -top-1 -left-1 w-4 h-4 md:w-6 md:h-6 bg-brand-accent rounded-full animate-ping"></span>
+            <span className="absolute -top-1 -left-1 w-4 h-4 md:w-6 md:h-6 bg-brand-green rounded-full animate-ping"></span>
           </motion.a>
         )}
       </AnimatePresence>
