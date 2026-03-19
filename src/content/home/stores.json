@@ -1,0 +1,30 @@
+{
+  "tagline": "Our Presence",
+  "title": {
+    "main": "Visit Our",
+    "highlight": "Stores"
+  },
+  "list": [
+    { 
+      "name": "Indiranagar Experience Hub", 
+      "address": "123, 100 Feet Rd, Indiranagar, Bangalore", 
+      "timing": "10:00 AM - 9:00 PM", 
+      "phone": "+91 98765 43210",
+      "img": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800"
+    },
+    { 
+      "name": "Whitefield Mega Store", 
+      "address": "45, ITPL Main Rd, Whitefield, Bangalore", 
+      "timing": "10:30 AM - 9:30 PM", 
+      "phone": "+91 98765 43211",
+      "img": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800"
+    },
+    { 
+      "name": "Jayanagar Outlet", 
+      "address": "89, 4th Block, Jayanagar, Bangalore", 
+      "timing": "10:00 AM - 8:30 PM", 
+      "phone": "+91 98765 43212",
+      "img": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800"
+    }
+  ]
+}

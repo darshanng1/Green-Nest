@@ -1,0 +1,13 @@
+{
+  "rating": "4.9/5 Google Rating",
+  "title": {
+    "main": "Trusted by",
+    "highlight": "5000+",
+    "end": "Happy Customers"
+  },
+  "list": [
+    { "name": "Rahul Verma", "role": "Home Owner", "text": "Got a premium Samsung TV at 40% off. The quality is indistinguishable from new. Highly impressed with the service!", "img": "https://i.pravatar.cc/150?u=rahul" },
+    { "name": "Sneha Kapoor", "role": "Interior Designer", "text": "I recommend Green Nest to all my clients looking for high-end appliances on a budget. Their refrigerators are top-notch.", "img": "https://i.pravatar.cc/150?u=sneha" },
+    { "name": "Amit Patel", "role": "Tech Reviewer", "text": "The 40-point quality check is no joke. Every appliance I've seen here is in excellent functional condition.", "img": "https://i.pravatar.cc/150?u=amit" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": {
+    "top": "Upgrade Your Home",
+    "bottom": "for Less Today"
+  },
+  "subtitle": "Don't settle for less. Get the premium appliances you've always wanted at prices you'll love. Visit our store or enquire online.",
+  "buttons": [
+    { "text": "Call Now", "icon": "Phone", "primary": true },
+    { "text": "WhatsApp", "icon": "MessageSquare", "secondary": true },
+    { "text": "Visit Store", "icon": "Store" }
+  ]
+}

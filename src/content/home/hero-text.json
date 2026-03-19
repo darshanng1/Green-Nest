@@ -1,0 +1,16 @@
+{
+  "tagline": "Premium Home Solutions",
+  "heading": {
+    "top": "Smart Electronics &",
+    "middle": "Home Appliances",
+    "bottom": "for Everyday Living"
+  },
+  "subheading": "Explore high-quality TVs, washing machines, and kitchen appliances designed for modern homes.",
+  "primaryCTA": "Shop Now",
+  "secondaryCTA": "Contact Us",
+  "images": {
+    "tv": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1200&q=80",
+    "washingMachine": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=1200&q=80",
+    "kitchen": "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80"
+  }
+}

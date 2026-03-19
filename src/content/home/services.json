@@ -1,0 +1,6 @@
+[
+  { "title": "Free Delivery", "desc": "On all orders above ₹10,000", "icon": "Truck" },
+  { "title": "Certified Quality", "desc": "40-point rigorous testing", "icon": "ShieldCheck" },
+  { "title": "Easy Returns", "desc": "7-day hassle-free returns", "icon": "RotateCcw" },
+  { "title": "Expert Setup", "desc": "Professional installation", "icon": "Settings" }
+]

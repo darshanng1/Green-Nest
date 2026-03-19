@@ -1,0 +1,18 @@
+{
+  "brand": {
+    "first": "GREEN",
+    "second": "NEST"
+  },
+  "links": [
+    { "name": "Home", "href": "#home", "icon": "Home" },
+    { "name": "Offers", "href": "#offers", "icon": "Zap" },
+    { "name": "About", "href": "#about", "icon": "CheckCircle" },
+    { "name": "Stores", "href": "#stores", "icon": "MapPin" },
+    { "name": "Blog", "href": "#blog", "icon": "MessageSquare" },
+    { "name": "Contact", "href": "#contact", "icon": "Mail" }
+  ],
+  "cta": {
+    "text": "Find Store",
+    "icon": "Store"
+  }
+}

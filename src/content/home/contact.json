@@ -1,0 +1,27 @@
+{
+  "tagline": "Connect With Us",
+  "title": {
+    "main": "Get In",
+    "highlight": "Touch"
+  },
+  "description": "Have a question about a product? Or need help with your order? Our expert team is ready to assist you.",
+  "info": [
+    { "icon": "Phone", "label": "Call Us", "val": "+91 98765 43210" },
+    { "icon": "Mail", "label": "Email Us", "val": "support@greennest.in" },
+    { "icon": "MapPin", "label": "Visit Our Store", "val": "Green Nest Hub, Indiranagar, Bangalore" }
+  ],
+  "socials": [
+    { "icon": "Instagram", "href": "#" },
+    { "icon": "Twitter", "href": "#" },
+    { "icon": "Facebook", "href": "#" }
+  ],
+  "form": {
+    "fields": [
+      { "label": "Full Name", "type": "text", "placeholder": "John Doe" },
+      { "label": "Email Address", "type": "email", "placeholder": "john@example.com" },
+      { "label": "Enquiry Type", "type": "select", "options": ["Product Availability", "Order Status", "Warranty Claim", "Bulk/Corporate Enquiry"] },
+      { "label": "Your Message", "type": "textarea", "placeholder": "How can we help you?" }
+    ],
+    "buttonText": "Send Enquiry"
+  }
+}

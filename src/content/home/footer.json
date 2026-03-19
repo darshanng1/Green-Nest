@@ -1,0 +1,32 @@
+{
+  "description": "India's most trusted destination for premium refurbished and surplus home appliances. Quality you can feel, prices you'll love.",
+  "socialLinks": [
+    { "name": "Instagram", "icon": "Instagram", "href": "#" },
+    { "name": "Facebook", "icon": "Facebook", "href": "#" },
+    { "name": "Twitter", "icon": "Twitter", "href": "#" },
+    { "name": "Youtube", "icon": "Youtube", "href": "#" }
+  ],
+  "companyLinks": ["About Us", "Our Stores", "Sustainability", "Careers", "Contact"],
+  "shopLinks": [
+    { "name": "Televisions", "icon": "Tv" },
+    { "name": "Washing Machines", "icon": "Waves" },
+    { "name": "Refrigerators", "icon": "Refrigerator" },
+    { "name": "Air Conditioners", "icon": "Wind" },
+    { "name": "Kitchen", "icon": "UtensilsCrossed" }
+  ],
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Get exclusive early access to our biggest surplus drops and appliance guides.",
+    "subscriberCount": "5,000+"
+  },
+  "bottomLinks": [
+    { "name": "Privacy Policy", "href": "#" },
+    { "name": "Terms of Service", "href": "#" },
+    { "name": "Warranty Policy", "href": "#" },
+    { "name": "Sitemap", "href": "#" }
+  ],
+  "whatsapp": {
+    "number": "919876543210",
+    "message": "Hi Green Nest, I'm interested in your products!"
+  }
+}

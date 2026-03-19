@@ -1,0 +1,162 @@
+[
+  {
+    "brand": "Samsung",
+    "product": "Neo QLED 8K TV",
+    "title": "Experience the Future of TV",
+    "subtitle": "Unrivaled 8K clarity with Quantum Matrix Technology Pro.",
+    "cta": "Explore Now",
+    "img": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "LG",
+    "product": "OLED evo C3",
+    "title": "Infinite Contrast, Vivid Color",
+    "subtitle": "The world's #1 OLED brand for 10 consecutive years.",
+    "cta": "Shop OLED",
+    "img": "https://images.unsplash.com/photo-1558888401-3cc1de77652d?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Bosch",
+    "product": "Series 8 Washing Machine",
+    "title": "Gentle on Clothes, Tough on Stains",
+    "subtitle": "i-DOS automatic dosing system for perfect results.",
+    "cta": "View Details",
+    "img": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Sony",
+    "product": "Bravia XR A95L",
+    "title": "Our Brightest OLED Ever",
+    "subtitle": "Cognitive Processor XR™ delivers wide color and contrast.",
+    "cta": "Learn More",
+    "img": "https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Dyson",
+    "product": "V15 Detect Vacuum",
+    "title": "The Most Powerful, Intelligent Cordless",
+    "subtitle": "Reveals invisible dust with laser illumination.",
+    "cta": "Buy Now",
+    "img": "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Whirlpool",
+    "product": "French Door Refrigerator",
+    "title": "Keep Food Fresh Longer",
+    "subtitle": "Dual cooling technology for optimal humidity control.",
+    "cta": "Explore",
+    "img": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Panasonic",
+    "product": "Inverter Microwave Oven",
+    "title": "Precision Cooking Made Easy",
+    "subtitle": "Even heating and defrosting with Inverter technology.",
+    "cta": "Shop Now",
+    "img": "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Haier",
+    "product": "Direct Motion Washing Machine",
+    "title": "Silent Performance, Maximum Care",
+    "subtitle": "Direct Motion Motor for a quieter and more efficient wash.",
+    "cta": "Discover",
+    "img": "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Philips",
+    "product": "Airfryer XXL",
+    "title": "Healthy Frying with 90% Less Fat",
+    "subtitle": "Rapid Air technology for crispy results every time.",
+    "cta": "Get Yours",
+    "img": "https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Apple",
+    "product": "MacBook Pro M3",
+    "title": "Mind-blowing Power",
+    "subtitle": "The most advanced chips ever built for a personal computer.",
+    "cta": "Shop Mac",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Dell",
+    "product": "XPS 15 Laptop",
+    "title": "Stunning Display, Powerful Performance",
+    "subtitle": "InfinityEdge display and high-performance processors.",
+    "cta": "Explore XPS",
+    "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Canon",
+    "product": "EOS R5 Mirrorless",
+    "title": "Uncompromising Performance",
+    "subtitle": "45MP full-frame sensor and 8K video recording.",
+    "cta": "View Camera",
+    "img": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Bose",
+    "product": "QuietComfort Ultra",
+    "title": "World-Class Noise Cancellation",
+    "subtitle": "Immersive audio that sounds more real than ever.",
+    "cta": "Shop Bose",
+    "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Nespresso",
+    "product": "Vertuo Next Coffee Machine",
+    "title": "The Ultimate Coffee Experience",
+    "subtitle": "Centrifusion™ technology for perfect crema.",
+    "cta": "Shop Coffee",
+    "img": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "KitchenAid",
+    "product": "Artisan Stand Mixer",
+    "title": "Iconic Design, Endless Possibilities",
+    "subtitle": "The essential tool for every home baker.",
+    "cta": "Shop Mixers",
+    "img": "https://images.unsplash.com/photo-1594385208974-2e75f9d8a847?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Siemens",
+    "product": "iQ700 Built-in Oven",
+    "title": "Cook Like a Professional",
+    "subtitle": "Reduce cooking times with fastPreheat and coolStart.",
+    "cta": "View Ovens",
+    "img": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Miele",
+    "product": "G 7000 Dishwasher",
+    "title": "Maximum Efficiency, Perfect Results",
+    "subtitle": "AutoDos with PowerDisk for superior cleaning.",
+    "cta": "Explore Miele",
+    "img": "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "GoPro",
+    "product": "HERO12 Black",
+    "title": "The Ultimate Action Camera",
+    "subtitle": "Best-in-class image quality and HyperSmooth 6.0.",
+    "cta": "Shop Hero",
+    "img": "https://images.unsplash.com/photo-1526170315870-ef68a6f3dd39?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Sonos",
+    "product": "Era 300 Speaker",
+    "title": "Feel the Sound All Around",
+    "subtitle": "Spatial audio with Dolby Atmos for immersive listening.",
+    "cta": "Shop Sonos",
+    "img": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "brand": "Fitbit",
+    "product": "Charge 6 Tracker",
+    "title": "Give Your Routine a Boost",
+    "subtitle": "Advanced health and fitness tracking on your wrist.",
+    "cta": "Shop Fitbit",
+    "img": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?auto=format&fit=crop&w=1200&q=80"
+  }
+]

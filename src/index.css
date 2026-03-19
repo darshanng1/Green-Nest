@@ -1,34 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --text-muted: #64748b;
+  --primary-color: #16a34a;
+  --primary-hover: #15803d;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.05);
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --footer-bg: #f8fafc;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --bg-color: #0f172a;
+  --text-color: #ffffff;
+  --text-muted: #94a3b8;
+  --primary-color: #22c55e;
+  --primary-hover: #16a34a;
+  --card-bg: #1e293b;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --nav-bg: rgba(15, 23, 42, 0.8);
+  --footer-bg: #020617;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6), 0 4px 6px -4px rgb(0 0 0 / 0.6);
+}
+
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-display: "Plus Jakarta Sans", sans-serif;
   --font-accent: "Outfit", sans-serif;
-  --color-brand-green: #16A34A;
-  --color-brand-dark: #09090B;
-  --color-brand-bg: #FFFFFF;
+  --color-brand-green: var(--primary-color);
+  --color-brand-dark: #0f172a;
+  --color-theme-bg: var(--bg-color);
+  --color-theme-text: var(--text-color);
+  --color-theme-muted: var(--text-muted);
+  --color-theme-card: var(--card-bg);
+  --color-theme-border: var(--card-border);
+  --color-theme-nav: var(--nav-bg);
+  --color-theme-footer: var(--footer-bg);
 }
 
 @layer base {
   body {
-    @apply font-sans bg-brand-bg text-brand-dark transition-colors duration-300;
+    @apply font-sans bg-theme-bg text-theme-text transition-colors duration-300 min-h-screen;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-display text-theme-text tracking-tight;
   }
-  
-  .dark body {
-    @apply bg-slate-950 text-slate-100;
+
+  p {
+    @apply text-theme-muted;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply backdrop-blur-md bg-white/70 border border-white/20;
+    @apply backdrop-blur-xl bg-[var(--nav-bg)] border border-[var(--card-border)];
   }
-  .dark .glass {
-    @apply bg-slate-900/70 border-white/10;
+  
+  .card-theme {
+    @apply bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--shadow-md)] rounded-[2.5rem] transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-[var(--primary-color)] text-white hover:bg-[var(--primary-hover)] transition-all duration-300 rounded-2xl font-bold uppercase tracking-widest;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-[var(--card-border)] text-[var(--text-color)] hover:bg-[var(--card-bg)] transition-all duration-300 rounded-2xl font-bold uppercase tracking-widest;
   }
 }

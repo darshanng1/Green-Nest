@@ -1,0 +1,17 @@
+{
+  "tagline": "PREMIUM CATEGORIES",
+  "title": {
+    "main": "Explore our",
+    "highlight": "Curated",
+    "end": "collection of home essentials."
+  },
+  "list": [
+    { "name": "Washing Machines", "icon": "Waves", "img": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=800&q=80" },
+    { "name": "Refrigerators", "icon": "Refrigerator", "img": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" },
+    { "name": "AC & Coolers", "icon": "Wind", "img": "https://images.unsplash.com/photo-1631545729918-46c9756a7ca7?auto=format&fit=crop&w=800&q=80" },
+    { "name": "TVs", "icon": "Tv", "img": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80" },
+    { "name": "Microwaves", "icon": "Microwave", "img": "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=800&q=80" },
+    { "name": "Induction Stoves", "icon": "Zap", "img": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" },
+    { "name": "Mixer Grinders", "icon": "Zap", "img": "https://images.unsplash.com/photo-1585238341267-1cfec2046a55?auto=format&fit=crop&w=800&q=80" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "tagline": "The Green Nest Advantage",
+  "title": {
+    "main": "Why Smart Shoppers",
+    "highlight": "Choose Us"
+  },
+  "description": "We bridge the gap between premium quality and affordable pricing, ensuring every home gets the best technology without breaking the bank.",
+  "reasons": [
+    {
+      "title": "Eco-Friendly Choice",
+      "desc": "By choosing refurbished, you reduce e-waste and help the planet.",
+      "icon": "Leaf"
+    },
+    {
+      "title": "Smart Savings",
+      "desc": "Get premium brands at up to 60% less than market price.",
+      "icon": "Zap"
+    },
+    {
+      "title": "Expert Support",
+      "desc": "Dedicated after-sales support for all your appliance needs.",
+      "icon": "MessageSquare"
+    }
+  ]
+}

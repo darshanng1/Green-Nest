@@ -1,0 +1,36 @@
+{
+  "tagline": "Exclusive Deals",
+  "title": {
+    "main": "Featured",
+    "highlight": "Offers"
+  },
+  "filters": {
+    "brand": "Filter by Brand",
+    "condition": "Filter by Condition",
+    "clear": "Clear All Filters"
+  },
+  "search": {
+    "placeholder": "Search by name, brand or category..."
+  },
+  "sorting": {
+    "label": "Sort:",
+    "options": [
+      { "value": "default", "label": "Default" },
+      { "value": "price-low", "label": "Price: Low to High" },
+      { "value": "price-high", "label": "Price: High to Low" },
+      { "value": "discount", "label": "Highest Discount" }
+    ]
+  },
+  "empty": {
+    "title": "No products found",
+    "description": "We couldn't find any products matching your current filters. Try adjusting your selection or clear all filters.",
+    "button": "Clear All Filters"
+  },
+  "details": {
+    "button": "Details",
+    "whatsapp": "Enquire on WhatsApp",
+    "warrantyLabel": "Warranty Details",
+    "priceLabel": "Our Price",
+    "mrpLabel": "MRP"
+  }
+}
